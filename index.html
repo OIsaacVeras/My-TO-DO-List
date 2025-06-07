@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My TO-DO List</title>
+    <link rel="stylesheet" href="./styles/page-style.css">
+    <link rel="stylesheet" href="./styles/inputs-style.css">
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/toggle-script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="./images/layers-icon.png">
+</head>
+<body>
+    <div class="modal-container">
+        <div class="modal">
+            <p>
+                Do you really want to delete "<span id="taskModalText">levar o cachorro para passear</span>"task?
+            </p>
+            
+            <div class="modal-buttons">
+                <button class="yesButton" id="modalYes">Yes</button>
+                <button id="modalNo">No</button>
+            </div>
+        </div>
+    </div>
+    <div class="todo-list-container">
+        <div class="logo-area">
+            <img src="images/layers.png" alt="logo image">
+            <h3>TO-DO List</h3>
+        </div>
+
+        <div class="search-toggle-area">
+            Search
+            <div class="toggle"></div>
+        </div>
+
+        <div class="add-search-container">
+            <input type="text" placeholder="Type a task here..." id="input-text">
+            <button id="addSearchBTN" onclick="decideAddOrSearch()">Add</button>
+        </div>
+
+        <div class="tasks-container">
+
+            <div class="task-item-container" id="0">
+                <label class="">
+                    <span class="checkbox"></span>
+                    <input type="text" value="Ola mundo" maxlength="50">
+                </label>
+                <img src="images/trash-x.png" alt="trash icon">
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <a href="github.com/OIsaacVeras">github.com/OIsaacVeras</a>
+        </address>
+    </footer>
+</body>
+</html>

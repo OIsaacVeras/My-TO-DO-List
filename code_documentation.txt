@@ -1,0 +1,49 @@
+================= My TODO List Code Doc =================
+=========================================================
+
+VARIABLES:
+    tasksList: Stores the list of tasks. If it has a list stored in local storage it fatches from there, otherwise it starts with a list with only one itemn called "hello world".
+
+    filteredList: Stores the filtered list in search mode.
+
+    isSearchMode: Identifies whether search mode is activated or not.
+
+    haveOneClick: Identifies if the user already clicked on the input of a task (Serves to simulate a dblclick even when tasks are being redesigned).
+
+    isInEditing: Identifies if a task input is being edited.
+
+FUNCTIONS:
+    document.addEventListener("DOMContentLoaded", ()=>{...}): Load the list for the first time.
+
+    decideAddOrSearch(button): It is called when the add/search button is clicked. It decides what should be done: whether to use the text of the main input to search for a task or to create a new task.
+        button: Represents the button (add/search button) that was clicked to call the function.
+
+    addANewTask(): It is called when "decideAddSearch" realizes that search mode is turned off and decides to use the input text to create a new task. Create a new task object and add it to tasksList.
+
+    printList(): It is called whenever there is a change in the list and it needs to be updated on the screen. "Draw" tasks on the screen.
+
+    answerOfModal(): It is called inside "deleteTask()". Returns a promise that resolves to true if the modal's "yes" button is clicked, and false if the modal's "no" button is clicked.
+
+    deleteTask(deleteImage): It is called when a delete button (trash image) is clicked. Shows the modal and depending on the modal's response, it delets the task or not.
+        deleteImage: Represents the trash image that was clicked.
+
+    markATask(label): It is called when a task label is clicked. Toggle a task as finished or not, then have the list redrawn.
+        label: Represents the label that was clicked.
+
+    editATask(event): It is called when a task input is clicked. In the first call, it activates "haveOneClick", the second, if "haveOneClick" is still "true", it enables the task input that was clicked to be edited.
+        event: The event object.
+
+    closeEditingTask(input): It is called when an input of a task that is being edited is blurred. Disables a task that is in edit mode.
+        input: Represents the input of the task.
+
+    filterTasks(): It is called when "decideAddOrSearch" realizes that search mode is on and decides to use the input text to search for tasks. Filter the taskList and place it in filteredList, then have the list redrawn.
+
+    stringContains(text, string): It is called during the action of updating the "filteredList" within "filterTasks()". This is the function that serves as a filter for "filterTasks()", it has the algorithm that tells you if the string contains a substring or not.
+
+LOCAL STORAGE:
+    Local storage in this application is used to store tasks in JSON form in the user's PC memory.
+
+    At the start of the program, "tasksList" tries to pull a JSON from the local storage, if it doesn't succeed, a default list is created.
+    
+    The JSON in local storage is updated whenever the list is changed, whether by adding a new item, removing an existing item, editing an item or marking an item as finished.
+

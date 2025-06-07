@@ -1,0 +1,112 @@
+.modal-buttons button {
+    width: 40%;
+    height: 40px;
+    
+    outline: none;
+    border: none;
+    border-radius: 30px;
+
+}
+
+.yesButton {
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+}
+
+.yesButton:hover {
+    background-color: var(--secondary-blue);
+    color: var(--primary-gray);
+}
+
+.toggle {
+    width: 30px;
+    height: 15px;
+    
+    background-color: var(--primary-gray);
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.toggle::before {
+    content: "";
+    display: block;
+    
+    width: 15px;
+    height: 15px;
+    
+    background-color: var(--secondary-gray);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.toggle.actived {
+    background-color: var(--primary-blue);
+}
+
+.toggle.actived::before {
+    transform: translateX(100%);
+    background-color: var(--primary-gray);
+}
+
+/* Add search input */
+.add-search-container {
+    width: 100%;
+    height: 40px;
+
+    background-color: var(--primary-gray);
+    margin-top: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    display: flex;
+}
+
+.add-search-container input {
+    width: 80%;
+    height: 100%;
+
+    padding: 0 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.add-search-container button {
+    width: 20%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    font-weight: bolder;
+}
+
+.add-search-container button:hover {
+    color: var(--secondary-white);
+    background-color: var(--secondary-blue);
+    cursor: pointer;
+}
+
+/* Checkbox */
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+
+    display: inline-block;
+    background-color: var(--primary-gray);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.marked .checkbox {
+    background-color: var(--primary-blue);
+}
+.marked input {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
