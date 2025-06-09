@@ -1,4 +1,5 @@
 # 📝 My-TO-DO-List
+![Image](https://github.com/user-attachments/assets/ad3779e1-1e58-4cf5-b29c-3c2540204d04)
 A simple to-do list app built using vanilla JavaScript, HTML, and CSS. This project was created as a way to improve my skills in core web development without using any frameworks or libraries.
 
 ### Technologies used:
